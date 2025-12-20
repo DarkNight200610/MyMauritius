@@ -354,7 +354,7 @@ body {
     background: rgba(0, 0, 0, 0.212);
     padding-top: 120px;
     text-align: center;
-    background-image: url('backgroundcontact.jpg');
+    background-image: url("backgroundcontact.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -377,6 +377,7 @@ body {
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.212);
 }
+
 
 
 
