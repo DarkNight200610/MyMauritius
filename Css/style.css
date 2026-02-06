@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/*Main Page*/
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ================= CUSTOM SCROLLBAR ================= */
+/*Scrollbar*/
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -41,7 +41,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 
-/* ================= NAVBAR ================= */
+/*Nav Bar*/
 .top-bar {
     position: fixed;
     top: 0;
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb:hover {
     transform: scale(1.2);
 }
 
-/* ================= LOGIN DROPDOWN ================= */
+/* Login dropdown in homepage(index) */
 .login-dropdown {
     position: absolute;
     right: 175px;
@@ -170,7 +170,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
 }
 
-/* ================= HERO / INDEX ================= */
+/* Main Text */
 .hero-section {
     position: relative;
     background-image: url('../Images/background.jpeg');
@@ -208,7 +208,7 @@ body::-webkit-scrollbar-thumb:hover {
     padding-top: 5px;
 }
 
-/* ================= ABOUT / OVERLAY ================= */
+/*Sub Text About Mauritius */
 .about-overlay {
     position: absolute;
     top: 60%;
@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 15px;
 }
 
-/* ================= POPULAR PLACES ================= */
+/* Middle Text Popular Places */
 .popular-places {
     position: relative;
     width: 100%;
@@ -336,7 +336,7 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.589);
 }
 
-/* ===== Cards ===== */
+/*Cards */
 .card-info {
     position: absolute;
     bottom: 0px;
@@ -377,7 +377,7 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 15px;
 }
 
-/* ================= GRAND BASSIN ================= */
+/* Page Grand Bassin */
 .gb-hero {
     background-image: url('../Images/gbassinbackground.jpg');
     background-size: cover;
@@ -432,11 +432,15 @@ body::-webkit-scrollbar-thumb:hover {
     margin-left: 275%;
 }
 
-/* SLIDESHOW */
+/* Slideshow of cards */
 .slideshow {
     width: 100%;
     height: 100%;
     position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 6px;
 }
 
 .slideshow img {
@@ -453,12 +457,18 @@ body::-webkit-scrollbar-thumb:hover {
     opacity: 1;
 }
 
+
+
+
+
+
 .about-card-wrapper {
     width: 320px;
     margin-left: auto;
     position: relative;
+   
 }
-
+/*Cards*/
 .card-title {
     font-size: 2rem;
     position: absolute;
@@ -471,7 +481,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= BLACK RIVER GORGES ================= */
+/* Page Black River Gorges */
 .brg-hero {
     background-image: url('../Images/brgbackground.jpg');
     background-size: cover;
@@ -516,7 +526,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= Casela Nature Park ================= */
+/*Page Casela Nature Park */
 .casela-hero {
     background-image: url('../Images/caselabackground.jpg');
     background-size: cover;
@@ -561,7 +571,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= Le Morne Brabant ================= */
+/*Page Le Morne Brabant */
 .lemorne-hero {
     background-image: url('../Images/lemondebackground.jpg');
     background-size: cover;
@@ -606,7 +616,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= Ile Aux Cerfs ================= */
+/* Page Ile Aux Cerfs */
 .cerfs-hero {
     background-image: url("../Images/ileauxcerfbackground.jpg");
     background-size: cover;
@@ -651,7 +661,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= Chamarel ================= */
+/* Page Chamarel */
 .chamarel-hero {
     background-image: url('../Images/chamarelbackground.jpg');
     background-size: cover;
@@ -696,7 +706,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= Château de Labourdonnais ================= */
+/*Page Chateau de Labourdonnais */
 .chateau-hero {
     background-image: url('../Images/chateaubackground.jpeg');
     background-size: cover;
@@ -741,32 +751,9 @@ body::-webkit-scrollbar-thumb:hover {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
-/* ================= SLIDESHOW ================= */
-.slideshow {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    outline: 2px solid rgba(255, 255, 255, 0.6);
-    outline-offset: 6px;
-}
 
-.slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease;
-    border-radius: 10px;
-}
 
-.slideshow img.active {
-    opacity: 1;
-}
-
-/* ================= ABOUT US - FIXED ================= */
+/* About Us section */
 .about-us {
     width: 100%;
     min-height: 60vh;
@@ -820,7 +807,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-top: 20px;
 }
 
-/* ================= CONTACT PAGE ================= */
+/* Contact Page*/
 .contact-page {
     min-height: 100vh;
     background-image: url('../Images/backgroundcontact.jpg');
@@ -846,7 +833,7 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 12px;
 }
 
-/* ================= LOGIN PAGE STYLES ================= */
+/* Login Page */
 body.login-page {
     font-family: 'Times New Roman', Times, serif;
     background: url('../Images/background.jpeg') no-repeat center center fixed;
@@ -903,7 +890,7 @@ body.login-page::before {
     line-height: 1.2;
 }
 
-/* ================= FORM CONTAINER ================= */
+/* login container */
 .form-container {
     display: flex;
     gap: 30px;
@@ -917,7 +904,7 @@ body.login-page::before {
     padding: 10px;
 }
 
-/* ================= LOGIN & REGISTER FORMS ================= */
+/* Container */
 .auth-form {
     background: rgba(7, 7, 7, 0.3);
     backdrop-filter: blur(15px);
@@ -1083,7 +1070,7 @@ body.login-page::before {
     transform: translateY(-2px);
 }
 
-/* ================= CALCULATOR PAGE STYLES ================= */
+/* Calculator */
 
 
 
@@ -1112,7 +1099,7 @@ body.calculator-page::before {
     z-index: 1;
 }
 
-/* ================= CALCULATOR PAGE CONTENT ================= */
+/*  Calculator */
 .calculator-container {
     position: absolute;
     z-index: 2;
@@ -1148,7 +1135,7 @@ body.calculator-page::before {
     line-height: 1.2;
 }
 
-/* ================= CALCULATOR WRAPPER ================= */
+/* Caculator wrapper */
 .calculator-wrapper {
     width: 100%;
     max-width: 380px;
@@ -1157,7 +1144,7 @@ body.calculator-page::before {
     align-items: center;
 }
 
-/* ================= CALCULATOR BOX ================= */
+/* Calculator box */
 .calculator-box {
     background: rgba(7, 7, 7, 0.3);
     backdrop-filter: blur(15px);
@@ -1168,7 +1155,7 @@ body.calculator-page::before {
     width: 100%;
 }
 
-/* ================= CALCULATOR DISPLAY ================= */
+/*caculator box */
 .calculator-display {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
@@ -1200,7 +1187,7 @@ body.calculator-page::before {
     word-break: break-all;
 }
 
-/* ================= CALCULATOR BUTTONS ================= */
+/* caculator buttons */
 .calculator-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1224,7 +1211,7 @@ body.calculator-page::before {
     height: 60px;
 }
 
-/* Number buttons */
+/* number buttons*/
 .calc-btn.number-btn {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1240,7 +1227,7 @@ body.calculator-page::before {
     transform: translateY(-1px);
 }
 
-/* Operator buttons */
+/* operatorr buttons */
 .calc-btn.operator-btn {
    background: rgba(255, 255, 255, 0.342);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1318,7 +1305,7 @@ body.calculator-page::before {
     box-shadow: 0 5px 15px rgba(150, 150, 150, 0.3);
 }
 
-/* ================= RESPONSIVE ================= */
+/* responsivess */
 @media (max-width: 480px) {
     .calculator-container {
         padding: 15px;
