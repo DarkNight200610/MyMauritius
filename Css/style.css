@@ -1,0 +1,1474 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(136, 133, 133);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(63, 63, 63, 0.836);
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+
+/* ================= NAVBAR ================= */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: backdrop-filter 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.644);
+}
+
+.top-bar:hover {
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.nav-left {
+    position: absolute;
+    left: 175px;
+}
+
+.nav-line {
+    position: absolute;
+    bottom: 0;
+    left: 175px;
+    right: 175px;
+    height: 1px;
+    background-color: white;
+    z-index: 1001;
+}
+
+.logo {
+    width: 55px;
+    height: 60px;
+    background-image: url("C:/Users/anike/OneDrive/Documents/Website/Images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Fantasy', Times, serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-center a:hover {
+    transform: scale(1.2);
+}
+
+/* ================= LOGIN DROPDOWN ================= */
+.login-dropdown {
+    position: absolute;
+    right: 175px;
+    padding-bottom: 15px;
+}
+
+.login-icon {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    top: 4px;
+    right: -20px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 80px;
+    top: 0px;
+    min-width: 140px;
+    background: rgba(7, 7, 7, 0.151);
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgb(0, 0, 0);
+}
+
+.dropdown-menu a {
+    color: white;
+    height: 35px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0, 0, 0, 0.212);
+    padding: 2px 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.login-dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* ================= HERO / INDEX ================= */
+.hero-section {
+    position: relative;
+    background-image: url('C:/Users/anike/OneDrive/Documents/Website/Images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 75px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.26);
+
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-top: 50px;
+    padding-top: 45px;
+    color: rgb(255, 255, 255);
+    filter: blur(1.2px);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+     
+}
+
+.hero-section p {
+    font-size: 20px;
+    filter: blur(0.7px);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: white;
+    margin: 0;
+    padding-top: 5px;
+}
+
+/* ================= ABOUT / OVERLAY ================= */
+.about-overlay {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.349);
+}
+
+.about-overlay h2 {
+    margin-top: 35px;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-left: 20px;
+}
+
+.about-overlay p {
+    font-size: 1em;
+    margin-left: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+/* ================= POPULAR PLACES ================= */
+.popular-places {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.popular-places::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/background2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.popular-places h2 {
+    font-size: 50px;
+    filter: blur(0.8px);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 50px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.cards-row.active {
+    cursor: grabbing;
+}
+
+.cards-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cards-row::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.199);
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.cards-row::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.103);
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.cards-row::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.308);
+}
+
+.place-card {
+    flex: 0 0 auto;
+    width: clamp(250px, 40vw, 300px);
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.589);
+}
+
+/* ===== Cards ===== */
+.card-info {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-info h3 {
+    position: absolute;
+    bottom: 340px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin: 0;
+    width: 90%;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.2;
+}
+
+.card-info p {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin: 0;
+    width: 90%;
+    font-size: 1em;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.329);
+    border-radius: 15px;
+}
+
+/* ================= GRAND BASSIN ================= */
+.gb-hero {
+    background-image: url('../Images/gbassinbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.212);
+}
+
+.gb-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.gb-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gb-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.about-card {
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+    padding: 5px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: -375px;
+    margin-left: 275%;
+}
+
+/* SLIDESHOW */
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+    border-radius: 10px;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+.about-card-wrapper {
+    width: 320px;
+    margin-left: auto;
+    position: relative;
+}
+
+.card-title {
+    font-size: 2rem;
+    position: absolute;
+    top: -30px;
+    right: -830px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= BLACK RIVER GORGES ================= */
+.brg-hero {
+    background-image: url('../Images/brgbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.37);
+}
+
+.brg-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.brg-about .about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.brg-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.brg-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= Casela Nature Park ================= */
+.casela-hero {
+    background-image: url('../Images/caselabackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.173);
+}
+
+.casela-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.casela-about .about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.casela-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.casela-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= Le Morne Brabant ================= */
+.lemorne-hero {
+    background-image: url('../Images/lemondebackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.173);
+}
+
+.lemorne-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.lemorne-about .about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.lemorne-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.lemorne-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= Ile Aux Cerfs ================= */
+.cerfs-hero {
+    background-image: url("../Images/ileauxcerfbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.468);
+}
+
+.cerfs-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.cerfs-about .about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.cerfs-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.cerfs-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= Chamarel ================= */
+.chamarel-hero {
+    background-image: url('../Images/chamarelbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.173);
+}
+
+.chamarel-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.chamarel-about .about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.chamarel-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.chamarel-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= Château de Labourdonnais ================= */
+.chateau-hero {
+    background-image: url('../Images/chateaubackground.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.173);
+}
+
+.chateau-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 100vh;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+.chateau-about .about-text {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.chateau-about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.chateau-about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* ================= SLIDESHOW ================= */
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 6px;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+    border-radius: 10px;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* ================= ABOUT US - FIXED ================= */
+.about-us {
+    width: 100%;
+    min-height: 60vh;
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-image: url('../Images/background2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 5;
+    margin-top: 0;
+}
+
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.about-us h2,
+.about-us p {
+    position: relative;
+    z-index: 2;
+}
+
+.about-us h2 {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 35px;
+    padding: 40px 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-bottom: 0px;
+}
+
+.about-us p {
+    width: 60%;
+    margin: 0px auto 80px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-page {
+    min-height: 100vh;
+    background-image: url('../Images/backgroundcontact.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding-top: 120px;
+    text-align: center;
+}
+
+.contact-page h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.63);
+}
+
+.contact-box {
+    margin: 40px auto;
+    padding: 25px;
+    width: 320px;
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+}
+
+/* ================= LOGIN PAGE STYLES ================= */
+body.login-page {
+    font-family: 'Times New Roman', Times, serif;
+    background: url('../Images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+}
+
+body.login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-header {
+    margin-bottom: 30px;
+    text-align: center;
+    max-height: 100px;
+}
+
+.login-header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-bottom: 5px;
+    filter: blur(1.2px);
+    line-height: 1.2;
+}
+
+.login-header p {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    filter: blur(0.7px);
+    line-height: 1.2;
+}
+
+/* ================= FORM CONTAINER ================= */
+.form-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    height: 650px;
+    max-height: 650px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* ================= LOGIN & REGISTER FORMS ================= */
+.auth-form {
+    background: rgba(7, 7, 7, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 25px;
+    width: 400px;
+    height: 600px;
+    max-height: 600px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-align: center;
+    height: 40px;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+
+.auth-form form::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 0.95em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.95em;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+    flex-shrink: 0;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-footer {
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 0.9em;
+    flex-shrink: 0;
+}
+
+.form-footer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 0.9em;
+}
+
+.form-footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 0.9em;
+    flex-shrink: 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 10px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-shrink: 0;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ================= CALCULATOR PAGE STYLES ================= */
+
+
+
+body.calculator-page {
+    font-family: 'Times New Roman', Times, serif;
+    background: url('../Images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+body.calculator-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+/* ================= CALCULATOR PAGE CONTENT ================= */
+.calculator-container {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: calc(100vh - 60px);
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.calculator-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.calculator-header h1 {
+    font-size: 2.3em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-bottom: 8px;
+    filter: blur(1.2px);
+    line-height: 1.2;
+}
+
+.calculator-header p {
+    font-size: 1.1em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    filter: blur(0.7px);
+    line-height: 1.2;
+}
+
+/* ================= CALCULATOR WRAPPER ================= */
+.calculator-wrapper {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= CALCULATOR BOX ================= */
+.calculator-box {
+    background: rgba(7, 7, 7, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* ================= CALCULATOR DISPLAY ================= */
+.calculator-display {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: right;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.previous-operation {
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.7);
+    min-height: 26px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    word-break: break-all;
+}
+
+.current-operation {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    min-height: 50px;
+    word-break: break-all;
+}
+
+/* ================= CALCULATOR BUTTONS ================= */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.calc-btn {
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: white;
+    height: 60px;
+}
+
+/* Number buttons */
+.calc-btn.number-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calc-btn.number-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.calc-btn.number-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Operator buttons */
+.calc-btn.operator-btn {
+   background: rgba(255, 255, 255, 0.342);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calc-btn.operator-btn:hover {
+    background:rgba(255, 255, 255, 0.342);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.calc-btn.operator-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Equals button */
+.calc-btn.equals-btn {
+    background: rgba(255, 255, 255, 0.342);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    grid-column: span 2;
+}
+
+.calc-btn.equals-btn:hover {
+    background: rgba(255, 255, 255, 0.342);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.calc-btn.equals-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Zero button */
+.calc-btn[data-number="0"] {
+    grid-column: span 2;
+}
+
+/* Decimal button */
+.calc-btn[data-action="decimal"] {
+    background: rgba(100, 100, 100, 0.2);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+}
+
+.calc-btn[data-action="decimal"]:hover {
+    background: rgba(100, 100, 100, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 100, 100, 0.1);
+}
+
+/* Clear buttons */
+.calc-btn[data-action="clear"],
+.calc-btn[data-action="clear-all"] {
+     background: rgba(100, 100, 100, 0.2);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+}
+
+.calc-btn[data-action="clear"]:hover,
+.calc-btn[data-action="clear-all"]:hover {
+    background: rgba(100, 100, 100, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 100, 100, 0.1);
+}
+
+/* Percentage button */
+.calc-btn[data-action="percentage"] {
+ background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(150, 150, 150, 0.3);
+}
+
+.calc-btn[data-action="percentage"]:hover {
+  background: rgba(59, 59, 59, 0.452);
+    
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(150, 150, 150, 0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+    .calculator-container {
+        padding: 15px;
+        justify-content: center;
+    }
+    
+    .calculator-box {
+        padding: 20px;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    
+    .calculator-header {
+        margin-bottom: 20px;
+    }
+    
+    .calculator-header h1 {
+        font-size: 2em;
+    }
+    
+    .calculator-header p {
+        font-size: 1em;
+    }
+    
+    .calc-btn {
+        padding: 14px;
+        font-size: 1.3em;
+        height: 55px;
+    }
+    
+    .calculator-buttons {
+        gap: 10px;
+    }
+    
+    .current-operation {
+        font-size: 2em;
+        min-height: 45px;
+    }
+    
+    .previous-operation {
+        font-size: 1em;
+        min-height: 24px;
+    }
+    
+    .calculator-display {
+        padding: 15px;
+        min-height: 100px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-height: 700px) {
+    .calculator-container {
+        padding: 15px;
+        justify-content: center;
+    }
+    
+    .calculator-header {
+        margin-bottom: 20px;
+    }
+    
+    .calculator-header h1 {
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+    
+    .calculator-header p {
+        font-size: 0.9em;
+    }
+    
+    .calculator-box {
+        padding: 18px;
+    }
+    
+    .calc-btn {
+        padding: 14px;
+        height: 52px;
+        font-size: 1.3em;
+    }
+    
+    .calculator-buttons {
+        gap: 10px;
+    }
+    
+    .calculator-display {
+        padding: 15px;
+        min-height: 95px;
+        margin-bottom: 15px;
+    }
+    
+    .current-operation {
+        font-size: 1.9em;
+        min-height: 42px;
+    }
+    
+    .previous-operation {
+        font-size: 0.95em;
+        min-height: 22px;
+    }
+}
+
+@media (max-height: 600px) {
+    .calculator-container {
+        padding: 10px;
+    }
+    
+    .calculator-header {
+        margin-bottom: 15px;
+    }
+    
+    .calculator-header h1 {
+        font-size: 1.6em;
+    }
+    
+    .calculator-header p {
+        font-size: 0.85em;
+    }
+    
+    .calculator-box {
+        padding: 15px;
+        max-width: 320px;
+    }
+    
+    .calc-btn {
+        padding: 12px;
+        height: 48px;
+        font-size: 1.2em;
+    }
+    
+    .calculator-buttons {
+        gap: 8px;
+    }
+    
+    .calculator-display {
+        padding: 12px;
+        min-height: 85px;
+        margin-bottom: 12px;
+    }
+    
+    .current-operation {
+        font-size: 1.7em;
+        min-height: 38px;
+    }
+    
+    .previous-operation {
+        font-size: 0.85em;
+        min-height: 20px;
+    }
+}
+
+
+
+
