@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Calculator state
+    // calculator state
     let currentOperand = '0';
     let previousOperand = '';
     let operation = null;
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const equalsButton = document.querySelector('.equals-btn');
     const decimalButton = document.querySelector('[data-action="decimal"]');
 
-    // Update display
+    // update display
     function updateDisplay() {
         currentOperationDisplay.textContent = currentOperand;
         
