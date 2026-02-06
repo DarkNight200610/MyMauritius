@@ -88,7 +88,9 @@ body::-webkit-scrollbar-thumb:hover {
 .logo {
     width: 55px;
     height: 60px;
-    background-image: url("../Images/logo.png");
+    
+     background-image: url("../Images/logo.png");
+    
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1468,6 +1470,7 @@ body.calculator-page::before {
         min-height: 20px;
     }
 }
+
 
 
 
