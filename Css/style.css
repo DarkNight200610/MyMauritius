@@ -88,7 +88,7 @@ body::-webkit-scrollbar-thumb:hover {
 .logo {
     width: 55px;
     height: 60px;
-    background-image: url("C:/Users/anike/OneDrive/Documents/Website/Images/logo.png");
+    background-image: url("../Images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -173,7 +173,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* ================= HERO / INDEX ================= */
 .hero-section {
     position: relative;
-    background-image: url('C:/Users/anike/OneDrive/Documents/Website/Images/background.jpeg');
+    background-image: url('../Images/background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1468,6 +1468,7 @@ body.calculator-page::before {
         min-height: 20px;
     }
 }
+
 
 
 
