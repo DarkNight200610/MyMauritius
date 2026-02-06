@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register | Mauritius</title>
+
+    <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <defs>
+        <clipPath id='c'>
+            <circle cx='50' cy='50' r='50'/>
+        </clipPath>
+        </defs>
+        <g clip-path='url(%23c)'>
+        <rect width='100' height='25' y='0' fill='%23EA2839'/>
+        <rect width='100' height='25' y='25' fill='%23003F87'/>
+        <rect width='100' height='25' y='50' fill='%23FFD500'/>
+        <rect width='100' height='25' y='75' fill='%2300A551'/>
+        </g>
+    </svg>">
+
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/login.css">
+</head>
+
+
+<body class="login-page">
+
+<!-- ================= NAVBAR ================= -->
+<div class="top-bar">
+    <div class="nav-line"></div>
+    <div class="nav-left logo"></div>
+
+    <nav class="nav-center" id="navMenu">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#cardsRowAnchor">Places</a>
+        <a href="../index.html#bottom">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Calculator</a>
+
+      
+                
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!-- ================= LOGIN PAGE CONTENT ================= -->
+<div class="login-container">
+    <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Login to your account or create a new one</p>
+    </div>
+    
+    <div class="form-container">
+        <!-- Login Form -->
+        <div class="auth-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Login</button>
+                
+                <div class="form-footer">
+                    <p><a href="#">Forgot Password?</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Register Form -->
+        <div class="auth-form">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="Create a password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create Account</button>
+                
+                <div class="form-footer">
+                    <p>By registering, you agree to our <a href="#">Terms & Conditions</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Form submission handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                // Simple validation
+                if (email && password) {
+                    alert('Login successful! Welcome back.');
+                    loginForm.reset();
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            });
+        }
+        
+        if (registerForm) {
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const password = document.getElementById('registerPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                
+                // Validation
+                if (!name || !email || !password || !confirmPassword) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    return;
+                }
+                
+                if (password.length < 6) {
+                    alert('Password must be at least 6 characters long.');
+                    return;
+                }
+                
+                alert('Registration successful! Welcome to Mauritius Explorer.');
+                registerForm.reset();
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

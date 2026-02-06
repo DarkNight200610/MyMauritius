@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamarel | Mauritius</title>
+
+    <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <defs>
+        <clipPath id='c'>
+          <circle cx='50' cy='50' r='50'/>
+        </clipPath>
+      </defs>
+      <g clip-path='url(%23c)'>
+        <rect width='100' height='25' y='0' fill='%23EA2839'/>
+        <rect width='100' height='25' y='25' fill='%23003F87'/>
+        <rect width='100' height='25' y='50' fill='%23FFD500'/>
+        <rect width='100' height='25' y='75' fill='%2300A551'/>
+      </g>
+    </svg>">
+
+    <!-- CSS path updated -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="chamarel-page">
+
+<!-- ================= NAVBAR ================= -->
+<div class="top-bar">
+    <div class="nav-line"></div>
+    <div class="nav-left logo"></div>
+
+    <nav class="nav-center" id="navMenu">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#cardsRowAnchor">Places</a>
+        <a href="../index.html#bottom">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Calculator</a>
+
+        <div class="login-dropdown">
+            <a href="login.html" class="login-icon">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <div class="dropdown-menu">
+                
+            </div>
+    </nav>
+</div>
+
+<!-- ================= HERO ================= -->
+<div class="chamarel-hero">
+    <h1>Chamarel</h1>
+    <p>The Colored Earth & Natural Wonders of Mauritius</p>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="about-overlay chamarel-about">
+    <div class="about-content">
+
+        <div class="about-text">
+            <h2>About Chamarel</h2>
+            <p>
+                Chamarel is a picturesque village located in the Rivière Noire District of Mauritius, famous for its 
+                extraordinary natural phenomena. The most iconic attraction is the Seven Colored Earths, a geological 
+                formation featuring sand dunes of seven distinct colors (red, brown, violet, green, blue, purple, and yellow) 
+                that spontaneously settle in separate layers, creating a surreal, rainbow-like landscape. Nearby, the 
+                Chamarel Waterfall plunges 100 meters down a cliff face, making it the highest waterfall in Mauritius. 
+                The area is surrounded by lush tropical forests, vanilla and palm plantations, and offers breathtaking 
+                panoramic views of the southwestern coast.
+            </p>
+        </div>
+
+        <div class="about-card-wrapper">
+            <p class="card-title">Natural Wonders</p>
+            <div class="about-card">
+                <div class="slideshow">
+                    <img src="../Images/chamarelp1.jpeg" class="slide active">
+                    <img src="../Images/chamarelp2.jpg" class="slide">
+                    <img src="../Images/chamarelp3.webp" class="slide">
+                    <img src="../Images/chamarelp4.jpg" class="slide">
+                    <img src="../Images/chamarelp5.jpeg" class="slide">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS path updated -->
+<script src="../Scripts/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    function showNextSlide() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000);
+});
+</script>
+</body>
+</html>

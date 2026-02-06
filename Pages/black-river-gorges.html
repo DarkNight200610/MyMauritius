@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black River Gorges | Mauritius</title>
+
+     <link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <defs>
+      <clipPath id='c'>
+        <circle cx='50' cy='50' r='50'/>
+      </clipPath>
+    </defs>
+    <g clip-path='url(%23c)'>
+      <rect width='100' height='25' y='0' fill='%23EA2839'/>
+      <rect width='100' height='25' y='25' fill='%23003F87'/>
+      <rect width='100' height='25' y='50' fill='%23FFD500'/>
+      <rect width='100' height='25' y='75' fill='%2300A551'/>
+    </g>
+  </svg>">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="brg-page">
+
+<!-- ================= NAVBAR ================= -->
+<div class="top-bar">
+    <div class="nav-line"></div>
+    <div class="nav-left logo"></div>
+
+    <nav class="nav-center" id="navMenu">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#cardsRowAnchor">Places</a>
+        <a href="../index.html#bottom">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Calculator</a>
+
+          <div class="login-dropdown">
+            <a href="login.html" class="login-icon">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <div class="dropdown-menu">
+                
+            </div>
+    </nav>
+</div>
+
+<!-- ================= HERO ================= -->
+<div class="brg-hero">
+    <h1>Black River Gorges</h1>
+    <p>Nature's Wilderness – The Heart of Mauritius</p>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="about-overlay brg-about">
+    <div class="about-content">
+
+        <div class="about-text">
+            <h2>Black River Gorges</h2>
+            <p>
+                Black River Gorges National Park is a vast and breathtaking forest reserve located in the southwestern region of Mauritius.
+                Spanning more than 6,500 hectares, it serves as the island's largest protected area and a vital sanctuary for rare endemic plants and wildlife found nowhere else on Earth.
+                The park is especially famous for its unique bird species, native ebony trees, and dense tropical vegetation that highlight Mauritius's natural heritage.
+                Visitors can wander along scenic hiking trails that wind through deep valleys, cross rivers, and lead to cascading waterfalls hidden within the forest.
+            </p>
+        </div>
+
+        <div class="about-card-wrapper">
+            <p class="card-title">Scenic Views</p>
+            <div class="about-card">
+                <div class="slideshow">
+                    <img src="../Images/brgp1.webp" class="slide active">
+                    <img src="../Images/brgp2.jpg" class="slide">
+                    <img src="../Images/brgp3.webp" class="slide">
+                    <img src="../Images/brgp4.jpg" class="slide">
+                    <img src="../Images/brgp5.webp" class="slide">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script src="../Scripts/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    function showNextSlide() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 5000);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Château de Labourdonnais | Mauritius</title>
+
+    <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <defs>
+        <clipPath id='c'>
+          <circle cx='50' cy='50' r='50'/>
+        </clipPath>
+      </defs>
+      <g clip-path='url(%23c)'>
+        <rect width='100' height='25' y='0' fill='%23EA2839'/>
+        <rect width='100' height='25' y='25' fill='%23003F87'/>
+        <rect width='100' height='25' y='50' fill='%23FFD500'/>
+        <rect width='100' height='25' y='75' fill='%2300A551'/>
+      </g>
+    </svg>">
+
+    <!-- CSS path updated -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="chateau-page">
+
+<!-- ================= NAVBAR ================= -->
+<div class="top-bar">
+    <div class="nav-line"></div>
+    <div class="nav-left logo"></div>
+
+    <nav class="nav-center" id="navMenu">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#cardsRowAnchor">Places</a>
+        <a href="../index.html#bottom">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Calculator</a>
+
+        <div class="login-dropdown">
+            <a href="login.html" class="login-icon">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <div class="dropdown-menu">
+                
+            </div>
+    </nav>
+</div>
+
+<!-- ================= HERO ================= -->
+<div class="chateau-hero">
+    <h1>Château de Labourdonnais</h1>
+    <p>Historic Elegance & Tropical Gardens</p>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="about-overlay chateau-about">
+    <div class="about-content">
+
+        <div class="about-text">
+            <h2>About Château de Labourdonnais</h2>
+            <p>
+                Château de Labourdonnais is a beautifully restored 19th-century colonial mansion located in the north 
+                of Mauritius, near Mapou. Built in 1856, this historic estate showcases exceptional Creole architecture 
+                and offers visitors a glimpse into the island's rich colonial past. Surrounded by magnificent tropical 
+                gardens spanning over 10 hectares, the estate features exotic plants, orchards, and walking paths. 
+                Today, it functions as a museum, restaurant, and rum distillery, allowing guests to explore the 
+                elegantly furnished rooms, learn about Mauritian history, taste locally produced rums and fruit juices, 
+                and enjoy gourmet cuisine made from estate-grown produce. 
+            </p>
+        </div>
+
+        <div class="about-card-wrapper">
+            <p class="card-title">Estate & Gardens</p>
+            <div class="about-card">
+                <div class="slideshow">
+                    <img src="../Images/chateaup1.jpg" class="slide active">
+                    <img src="../Images/chateaup2.jpg" class="slide">
+                    <img src="../Images/chateaup3.jpg" class="slide">
+                    <img src="../Images/chateaup4.jpg" class="slide">
+                    <img src="../Images/chateaup5.jpg" class="slide">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS path updated -->
+<script src="../Scripts/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    function showNextSlide() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000);
+});
+</script>
+</body>
+</html>
